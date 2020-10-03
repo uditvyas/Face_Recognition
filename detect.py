@@ -1,11 +1,11 @@
 import numpy as np
 import cv2
 
-face_cascade = cv2.CascadeClassifier('cascade.xml')
+face_cascade = cv2.CascadeClassifier('cascade1.xml')
 cap = cv2.VideoCapture(0)
 
-img = cv2.imread('photu.JPG',cv2.IMREAD_GRAYSCALE)
-img = cv2.resize(img,(100,100))
+img = cv2.imread('1706.jpg',cv2.IMREAD_GRAYSCALE)
+img = cv2.resize(img,(200,200))
 faces = face_cascade.detectMultiScale(img, 1.3, 5)
 for (x,y,w,h) in faces:
     cv2.rectangle(img,(x,y),(x+w,y+h),(255,0,0),2)
